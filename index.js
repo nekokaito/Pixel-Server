@@ -28,6 +28,12 @@ async function run() {
     await client.connect();
 
     const itemCollection = client.db('itemDB').collection('item');
+
+    app.get('/items', async (req, res) => {
+      const cursor = itemCollection.find();
+      const result = await cursor.toArray();
+      res.send(result)
+    })
     
     app.post('/items', async (req, res) => {
         const newItem = req.body;
