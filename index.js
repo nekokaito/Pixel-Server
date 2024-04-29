@@ -29,26 +29,34 @@ async function run() {
 
     const itemCollection = client.db('itemDB').collection('item');
 
+    app.post('/items', async (req, res) => {
+      const newItem = req.body;
+      console.log(newItem);
+      const result = await itemCollection.insertOne(newItem);
+      res.send(result);
+  })
+  app.get('/items/email/:email', async (req, res) =>{
+    const userEmail = req.params.email;
+    console.log(userEmail)
+    const result =  await itemCollection.find({email:userEmail}).toArray();
+    res.send(result);
+  })
+  app.get('/items/id/:id', async (req, res) => {
+    const id = req.params.id;
+    const query = {_id: new ObjectId(id)}
+    const result = await itemCollection.findOne(query);
+    res.send(result);
+  })
+
+
+
     app.get('/items', async (req, res) => {
       const cursor = itemCollection.find();
       const result = await cursor.toArray();
       res.send(result)
     })
     
-    app.post('/items', async (req, res) => {
-        const newItem = req.body;
-        console.log(newItem);
-        const result = await itemCollection.insertOne(newItem);
-        res.send(result);
-    })
     
-    app.get('/items/:email', async (req, res) =>{
-      const userEmail = req.params.email;
-      console.log(userEmail)
-      const result =  await itemCollection.find({email:userEmail}).toArray();
-      res.send(result);
-    })
-
     app.delete('/items/:id', async (req, res) => {
       const id = req.params.id;
       const query = {_id: new ObjectId(id)}
@@ -56,7 +64,7 @@ async function run() {
       res.send(result);
     })
 
-    await client.db("admin").command({ ping: 1 });
+   await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
