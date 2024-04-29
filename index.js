@@ -26,7 +26,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     
-    await client.connect();
+    // await client.connect();
 
     const itemCollection = client.db('itemDB').collection('item');
     const categoryCollection = client.db('itemDB').collection('subcategory');
@@ -106,9 +106,10 @@ async function run() {
       console.log(result);
     })
 
+     //Vercel
 
-   await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  //  await client.db("admin").command({ ping: 1 });
+  //   console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
