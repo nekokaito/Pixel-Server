@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "name": "Shayla Lipi",
+        "review": "The highlight is that, they have a huge collections of acoustic and aesthetic products",
+        "image": "https://i.ibb.co/zfKW0Cq/customer1.jpg",
+        "rating": 5
+    },
+    {
+        "id" : 2,
+        "name": "Sheikh Tahsan",
+        "review": "This is my first time buying from Pixels. I received the parcel very quickly. I must say, their service is one of the best I have ever had. Product quality is excellent. I hope to buy more products from Pixels in the future. Thank you ",
+        "image": "https://i.ibb.co/51H3TWk/customer2.jpg",
+        "rating": 5
+    },
+    {
+        "id" : 3,
+        "name": "Miftah E Ehsaas",
+        "review": "Its my first time buying art supplies from them... I must say, their service is one of the best Ive ever got... whenever I had a query there was always a humble response from them... products were of great quality as well... Highly recommend this shop",
+        "image": "https://i.ibb.co/KNWZ9tQ/customer3.jpg",
+        "rating": 4
+    },
+    {
+        "id" : 4,
+        "name": "Shinobu Jeon",
+        "review": "I ordered a Mont Marte watercolor set and two daisy transparent bags. Pixels gave the fastest service, I got my products in no time and the quality is top notch. Highly recommended for your art and crafts supply!",
+        "image": "https://i.ibb.co/fGWdtKq/customer4.jpg",
+        "rating": 5
+    },
+    {
+        "id" : 5,
+        "name": "Tamanna Urmi",
+        "review": "Good products as in the picture. The delivery was fast. Hope I will purchase more stuffs from here. Thanks for the service.",
+        "image": "https://i.ibb.co/t3Y1rjn/customer5.jpg",
+        "rating": 4
+    },
+    {
+        "id" : 6,
+        "name": "Fateeha Niel",
+        "review": "Pixels is my go to stationary heaven. I am glad they have everything i need as an artist.",
+        "image": "https://i.ibb.co/HTwbPCX/customer6.jpg",
+        "rating": 5
+    }
+]

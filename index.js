@@ -97,6 +97,8 @@ async function run() {
       const result = await cursor.toArray();
       res.send(result);
     })
+
+    
     app.get('/items/category/:url', async (req, res) =>{
       const Category = req.params.url;
       const userCategory = Category.replace(/_/g, " ");
